@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Respeta el Tamaño ala caja */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    background: #323a43;
+}
+section img{
+    height: 250px;
+    width: 100%;
+}
+.contenedor{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header,footer{
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+header{
+    background-color: aquamarine;
+}
+
+section, aside, footer{
+    float: left;
+    padding: 20px;
+}
+section{
+    width: 70%;
+    background-color: aliceblue;
+}
+aside{
+    width: 30%;
+    background-color: rgb(155, 165, 165);
+}
+footer {
+    width: 100%;
+    background-color: rgb(226, 11, 11);
+}
+@media screen and (max-width: 800px) {
+    section,aside{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .contenedor{
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+}

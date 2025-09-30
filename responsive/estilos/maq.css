@@ -1,0 +1,611 @@
+@font-face {
+    font-family: "TrebuchetsMs";
+    src: url(fuentes/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Bebas";
+    src: url(fuentes/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "iconos";
+    src: url(fuentes/websymbols-regular-webfont.svg);
+    src: url(fuentes/websymbols-regular-webfont.eot),
+        url(fuentes/websymbols-regular-webfont.ttf),
+        url(fuentes/websymbols-regular-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --red: red;
+    --fuenteP: "TrebuchetsMs";
+    --fuenteS: "Bebas";
+    --fuenteI: "iconos";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+}
+.iconos {
+    font-family: var(--fuenteI);
+}
+/*header*/
+@keyframes rotate {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes bellow {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    color: white;
+    height: 80px;
+    padding: 16px 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav {
+    width: 55%;
+    height: 100%;
+    align-items: center;
+}
+
+nav>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-family: "TrebuchetsMs";
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in;
+}
+
+header nav>ul li>a:hover {
+    color: rgb(4, 33, 179);
+    transform: scale(1.1, 1.1)
+}
+
+.logotipo {
+    background-color: rgb(4, 33, 179);
+    width: 165px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    font-family: "TrebuchetsMs";
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    overflow: hidden;
+    gap: 15px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.logotipo span {
+    display: inline-block; /* inline-block en lugar de block */
+    font-family: "iconos";
+    font-size:2rem;
+    animation: rotate 2s infinite linear;
+    transform-origin: center center; /* Asegura rotación desde el centro */
+}
+.logotipo h3{
+    display: block;
+    float: right;
+    width: 35%;
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-right: 65px;
+}
+.logotipo:hover{
+    border-radius: 1px;
+    color: black;
+    background-color: #ddd;
+}
+.logotipo:hover span{
+    animation: bellow 500ms linear;
+}
+@media (width < 874px) {
+    header{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+   
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    header .logotipo{
+        width: 150px;
+        margin-bottom: 15px;
+    }
+}
+/*inicio banner*/
+.wrap2 {
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 10px;
+
+
+}
+
+.banner {
+    font-family: "Bebas";
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 2px 2px gray;
+    background: url(https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backB 10s linear;
+    overflow: hidden;
+}
+@keyframes backB {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: center;
+    }
+
+}
+
+.banner h1 {
+    display: block;
+    width: 850px;
+    letter-spacing: 2px;
+    margin: 27px auto;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 2px 2px 1px black;
+    animation: show 10s linear;
+}
+@keyframes show {
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;   
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        opacity: 0; 
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        opacity: 1;
+    }
+}
+/*fin de banner*/
+/*inicio de cards*/
+.cards {
+    font-family: "TrebuchetsMs";
+    margin: auto;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+}
+@media (width < 874px) {
+    .cards{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 25px;
+    }
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    height: 305px;
+    color: rgb(14, 14, 103);
+    width: 205px;
+    text-align: center;
+    box-shadow: 2px -1px 6px gray;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+}
+.card:hover{
+    background-color: black;
+}
+.card span {
+    font-family: "iconos";
+    font-size: 45px;
+    color: black;
+    margin-bottom: 50px;
+    transition: all 300ms;
+}
+.card:hover span{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: sIcon 300ms linear;
+}
+@keyframes sIcon {
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }   
+}
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.card:hover h2{
+    color: white;
+}
+.card .description {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/*fin de cards */
+/*aside*/
+aside {
+    margin-top: 50px;
+    float: right;
+    width: 25%;
+}
+
+aside h3 {
+    font-family: var(--fuenteS);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 8px 16px;
+    display: block;
+    text-align: left;
+    background-color: rgb(224, 223, 223);
+    box-shadow: 0px 2px 1px black;
+    height: 45px;
+}
+
+.buscar {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #ccc inset;
+}
+
+.buscar input[type="search"] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #202020;
+}
+
+.buscar input[type="search"]:focus {
+    border-color: transparent;
+    /* azul */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+    /* quita el borde por defecto */
+}
+
+.buscar input[type="button"] {
+    float: right;
+    height: 30px;
+    width: 15%;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    padding: 5px;
+    background-color: #ccc;
+    color: #555c55;
+}
+
+.social {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-flow: column wrap;
+    width: 35%;
+    box-shadow: 2px -1px 6px gray;
+    padding: 8px 16px;
+}
+
+.social svg:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.posts {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(245, 245, 245);
+    width: 95%;
+    height: 220px;
+    box-shadow: 2px -1px 6px gray;
+}
+
+.login {
+    background-color: #fefefe;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 250px;
+    box-shadow: 2px -1px 6px gray inset;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.login form {
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.login input[type="text"],
+input[type="password"] {
+    margin-top: 10px;
+    height: 30px;
+    border: 1px solid blue;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #202020;
+}
+
+.login input[type="text"] {
+
+    width: 90%;
+}
+
+.login input[type="password"] {
+    width: 90%;
+}
+
+.login input[type="submit"],
+input[type="reset"] {
+    margin-top: 10px;
+    background-color: rgb(2, 179, 179);
+    border: 1px solid #000;
+    padding: 8px 16px;
+    width: 47%;
+    text-decoration: none;
+    color: white;
+    font-family: var(--fuenteP);
+}
+
+.user,
+.pass {
+    width: 15%;
+    font-size: 16px;
+}
+
+.login input[type="submit"] {
+    float: left;
+    right: 5px;
+}
+
+.login input[type="reset"] {
+    float: right;
+}
+
+.login a {
+    text-decoration: none;
+    color: #000;
+    font-family: var(--fuenteP);
+}
+
+/*fin de aside*/
+/*Inicio de articulos*/
+.articles {
+    width: 860px;
+    margin-top: 50px;
+}
+
+.articles h2 {
+    display: block;
+    background-color: #555c55;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: var(--fuenteS);
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    box-shadow: 0px 1px 0px rgb(194, 168, 168);
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.articles article {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+.articles article h4 {
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+
+.articles article h4 a {
+    text-decoration: none;
+    color: #00538c;
+}
+
+.articles .data {
+    float: right;
+    background-color: brown;
+    color: #fefefe;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.data span {
+    margin: 6px;
+}
+
+.articles article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.articles .blog {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--fuenteP);
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+/*inicio de footer*/
+footer {
+    margin-top: 50px;
+    background-color: #000;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+.cfooter{
+    width: 25%;
+}
+footer h5 {    
+    font-family: var(--fuenteS);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 8px 16px;
+    display: block;
+    text-align: left;
+    background-color: rgb(224, 223, 223);
+    box-shadow: 0px 2px 1px black;
+    height: 45px;
+}
+.menu_f ul li{
+    padding: 20px;
+}
+.menu_f  ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    font-size: 16px;
+    color: #3c93cd;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+.mapa{
+    height: 250px;
+}
+iframe{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+footer .desarollo svg{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    color: orange;
+    stroke: #000;
+    background-color: white;
+    border-radius: 50px;
+    padding: 9px;
+    margin-left: 5px;
+}
+.desarollo strong{
+    font-family: var(--fuenteP);
+    color: white;
+}
+/*fin de footer*/

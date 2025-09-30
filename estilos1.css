@@ -1,0 +1,236 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Inicio container*/
+#container{
+    width: 90%;
+    border: 1px solid rgba(255,255,226,0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin: 40px auto;
+    min-height: 600px;
+    padding: 20px;
+}
+
+
+
+/*Fin container*/
+
+/*Inicio header*/
+#container header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    flex-flow: row ;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+header h1{
+    flex-grow: 1;
+    flex-basis: 65%;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    padding: 10px;
+    margin-left: 20px;
+    text-shadow: 1px 1px 0px #ccc;
+}
+header nav{
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+
+}
+header nav ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header nav ul li a{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+    transition: all 300ms;
+    padding: 15px;
+}
+header nav ul li a:hover{
+    background: #ccc;
+    color: black;
+}
+@media(width < 1020px ) {
+    #container header{
+        flex-direction: column;
+        height: auto;
+    }
+    #container header nav{
+        margin-top: 25px;
+    }
+}
+@media (width < 575px) {
+    header{
+        height: auto;
+    }
+    #container  header nav {
+        margin-top: 0;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li{
+        margin-top: 20px;
+    }
+}
+/*Fin header*/
+
+/*Inicio de contenido cards*/
+main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 80%;
+}
+.proyect{
+    flex-basis: 250px;
+    flex-grow: 1;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+.proyect .image_wrap{
+    width: 100%;
+    height: 180px;
+}
+.proyecto{
+    padding: 10px;
+}
+.proyecto a{
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+    text-decoration: none;
+}
+.proyecto a:hover{
+    color: green;
+}
+.proyecto p{
+    color: gray;
+}
+.proyect img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*fin de contenido cards*/
+/*Inicio de Sidebar*/
+aside{
+    flex-basis: 15%;
+    margin-right: 15px;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-flow: column wrap;
+
+  
+}
+aside h2{
+    display: block;
+    padding-bottom: 10px;
+    font-size:20px ;
+    font-weight: 300;
+    color: #444;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul li{
+    padding-bottom: 20px;
+}
+main aside ul li a {
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    color: gray;
+    transition: all 300ms;
+    width: 100%;
+    background-color: rgb(217, 217, 217);
+    transition: all 0.3s ease-in;
+}
+main aside ul li a:hover{
+    color: black;
+    background-color: rgb(241, 241, 241);
+}
+
+@media (width < 1000px) {
+    main{
+        flex-direction: column;
+    }
+    main aside {
+        align-items: center;
+    }
+    main aside ul{
+        width: 50%;
+    
+        align-items: center;
+    }
+    main aside ul li a {
+        flex-basis: 70%;
+    }
+}
+/*Fin de sidebar*/
+
+/*Finde footer*/
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    height: 120px;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid rgba(225,225,226,0.8);
+}
+footer .logo{
+    order: 1;
+    text-align: right;
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    margin-right: 20px;
+   
+}
+footer .info{
+    order: 0;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+/*Inicio de footer*/
