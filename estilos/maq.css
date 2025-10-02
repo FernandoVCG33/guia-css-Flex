@@ -16,10 +16,10 @@
 
 @font-face {
     font-family: "iconos";
-    src: url(fuentes/websymbols-regular-webfont.svg);
-    src: url(fuentes/websymbols-regular-webfont.eot),
-        url(fuentes/websymbols-regular-webfont.ttf),
-        url(fuentes/websymbols-regular-webfont.woff);
+    src: url(../responsive/estilos/fuentes/websymbols-regular-webfont.svg);
+    src: url(../responsive/estilos/fuentes/websymbols-regular-webfont.eot),
+        url(../responsive/estilos/fuentes/websymbols-regular-webfont.ttf),
+        url(../responsive/estilos/fuentes/websymbols-regular-webfont.woff);
     font-weight: normal;
     font-style: normal;
 
