@@ -3,22 +3,22 @@
     padding: 0;
 }
 div{
-    width: 25%;
+    width: 15%;
     height: 200px;
     float: left;
     margin-top: 150px;
 }
 div:nth-child(1){
-    background-color: blueviolet;
+    background-color: yellow;
 }
 div:nth-child(2){
     background-color: aqua;
 }
 div:nth-child(3){
-    background-color: black;
+    background-color: green;
 }
 div:nth-child(4){
-    background-color: cadetblue;
+    background-color: red;
 }
 /*Estilos media query */
 
